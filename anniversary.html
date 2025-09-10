@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy 3rd Anniversary 💖</title>
+  <style>
+    :root{
+      --card-bg: rgba(255,255,255,0.12);
+      --accent: #ff6b93;
+      --accent-dark: #ff3b6f;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+
+    /* page background gradient */
+    body{
+      background: linear-gradient(135deg,#1b2a44 0%, #3b2a6b 50%, #523a6f 100%);
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
+      color:white;
+    }
+
+    /* centered card */
+    .card{
+      position:relative;
+      z-index:6;
+      width:min(880px,92%);
+      padding:36px;
+      border-radius:18px;
+      backdrop-filter: blur(8px) saturate(140%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow: 0 8px 40px rgba(8,8,20,0.6);
+      text-align:center;
+      overflow:hidden;
+    }
+
+    h1{font-size:2.4rem;margin:0 0 8px;font-weight:700;letter-spacing:0.4px}
+    p.lead{margin:0 0 18px;color:rgba(255,255,255,0.9);font-size:1.05rem}
+
+    .names{font-weight:600;font-size:1.2rem;margin-top:8px}
+
+    .btn-row{display:flex;gap:12px;justify-content:center;margin-top:20px}
+    .btn{
+      padding:10px 18px;border-radius:999px;border:0;cursor:pointer;font-weight:600;
+      background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+      color:white;box-shadow:0 6px 18px rgba(255,91,146,0.18);
+    }
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12)}
+
+    /* little flourish */
+    .subtitle{margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.85)}
+
+    /* floating hearts background (pure CSS) */
+    .hearts{
+      position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;
+    }
+    .hearts span{
+      position:absolute;bottom:-60px;left:50%;width:18px;height:18px;
+      transform:translateX(-50%) rotate(-45deg);
+      background:var(--accent);
+      border-radius:4px;
+      animation:rise linear infinite, sway ease-in-out infinite;
+      opacity:0.95;
+    }
+    .hearts span::before, .hearts span::after{
+      content:"";position:absolute;width:18px;height:18px;background:var(--accent);border-radius:50%;
+    }
+    .hearts span::before{top:-9px;left:0}
+    .hearts span::after{left:9px;top:0}
+
+    /* vertical rise */
+    @keyframes rise{
+      0%{transform: translateX(-50%) translateY(0) rotate(-45deg) scale(1)}
+      100%{transform: translateX(-50%) translateY(-130vh) rotate(-45deg) scale(1.4)}
+    }
+    /* gentle horizontal sway */
+    @keyframes sway{
+      0%{transform:translateX(-50%) rotate(-45deg) translateX(0)}
+      50%{transform:translateX(-50%) rotate(-45deg) translateX(24px)}
+      100%{transform:translateX(-50%) rotate(-45deg) translateX(-6px)}
+    }
+
+    /* variations by nth-child for position, size, duration, delay, opacity */
+    .hearts span:nth-child(1){left:6%;width:12px;height:12px;animation-duration:10s;animation-delay:0s;opacity:0.7}
+    .hearts span:nth-child(2){left:18%;width:18px;height:18px;animation-duration:14s;animation-delay:2s}
+    .hearts span:nth-child(3){left:28%;width:22px;height:22px;animation-duration:11s;animation-delay:1.2s;opacity:0.85}
+    .hearts span:nth-child(4){left:38%;width:14px;height:14px;animation-duration:13s;animation-delay:3.1s;opacity:0.7}
+    .hearts span:nth-child(5){left:48%;width:26px;height:26px;animation-duration:16s;animation-delay:0.5s}
+    .hearts span:nth-child(6){left:58%;width:10px;height:10px;animation-duration:9s;animation-delay:4.2s;opacity:0.6}
+    .hearts span:nth-child(7){left:68%;width:20px;height:20px;animation-duration:12s;animation-delay:2.6s}
+    .hearts span:nth-child(8){left:78%;width:15px;height:15px;animation-duration:15s;animation-delay:1s;opacity:0.8}
+    .hearts span:nth-child(9){left:86%;width:18px;height:18px;animation-duration:13s;animation-delay:3.8s}
+    .hearts span:nth-child(10){left:92%;width:12px;height:12px;animation-duration:10s;animation-delay:0.2s;opacity:0.6}
+
+    /* more scattered smaller ones */
+    .hearts span:nth-child(11){left:12%;width:8px;height:8px;animation-duration:8s;animation-delay:6s;opacity:0.5}
+    .hearts span:nth-child(12){left:22%;width:9px;height:9px;animation-duration:9s;animation-delay:5.6s}
+    .hearts span:nth-child(13){left:32%;width:11px;height:11px;animation-duration:11s;animation-delay:4.4s}
+    .hearts span:nth-child(14){left:44%;width:14px;height:14px;animation-duration:12s;animation-delay:7.1s}
+    .hearts span:nth-child(15){left:52%;width:10px;height:10px;animation-duration:10s;animation-delay:6.6s}
+    .hearts span:nth-child(16){left:62%;width:16px;height:16px;animation-duration:13s;animation-delay:5.2s}
+    .hearts span:nth-child(17){left:72%;width:9px;height:9px;animation-duration:9.5s;animation-delay:6.9s}
+    .hearts span:nth-child(18){left:82%;width:12px;height:12px;animation-duration:10.5s;animation-delay:4.9s}
+    .hearts span:nth-child(19){left:90%;width:14px;height:14px;animation-duration:14s;animation-delay:5.8s}
+    .hearts span:nth-child(20){left:40%;width:20px;height:20px;animation-duration:17s;animation-delay:2.2s}
+
+    /* adjust pseudo elements sizes to match parent width (keeps circles proportional) */
+    .hearts span::before, .hearts span::after{width:100%;height:100%;border-radius:50%}
+
+    /* small responsive tweaks */
+    @media (max-width:520px){
+      h1{font-size:1.6rem}
+      .card{padding:22px;border-radius:14px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy Anniversary ❤️</h1>
+    <p class="lead">Three years of laughter, late-night talks, adventures, and growing together. Here's to us — to every memory we've made and every one waiting ahead.</p>
+    
+    <div class="subtitle">Made with all my heart — click the button for a surprise</div>
+
+    <div class="btn-row">
+    <button class="btn" onclick="window.location.href='journey.html'">Show love</button>
+      <button class="btn ghost" onclick="alert('Happy 3 years! 💞')">Surprise</button>
+    </div>
+  </div>
+
+  <!-- pure-CSS floating hearts (no JS required) -->
+  <div class="hearts">
+    <!-- add up to 20 hearts; nth-child styling above controls their behavior -->
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+</body>
+</html>

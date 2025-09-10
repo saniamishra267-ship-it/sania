@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Our Journey 💕</title>
+ <a href="anniversary.html" class="btn">Back to Anniversary</a>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9eb5, #ffd6e0);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      color: #c2185b;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .quotes {
+      margin: 30px auto;
+      max-width: 700px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #444;
+    }
+    .music-control {
+      margin: 20px;
+    }
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 999px;
+      background: #c2185b;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a31548;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Beautiful Journey 💞</h1>
+
+  <div class="gallery">
+    <img src="WhatsApp Image 2025-09-10 at 19.14.33_7a50b80f.jpg" alt="Us together">
+    <img src="WhatsApp Image 2025-09-10 at 19.14.30_1300204a.jpg" alt="Happy moments">
+    <img src="WhatsApp Image 2025-09-10 at 19.14.14_47d9b6a3.jpg" alt="Memories">
+    <img src="WhatsApp Image 2025-09-10 at 19.14.32_c45d34f7.jpg" alt="Adventures">
+  </div>
+
+  <div class="quotes">
+    “Every love story is beautiful, but ours is my favorite.”<br><br>
+    “I still fall for you every single day.”<br><br>
+    “Three years down, forever to go.” 💖
+  </div>
+
+  <div class="music-control">
+    <audio id="bg-music" loop>
+      <source src="Preet Re Dhadak 2 320 Kbps.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="toggleMusic()">Play / Pause Music 🎵</button>
+  </div>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
